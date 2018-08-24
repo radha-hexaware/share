@@ -1,3 +1,15 @@
+.boldClass{
+  font-weight: bold;
+}
+.italicsClass{
+  font-style: italic;
+}
+.colorClass{
+  color: red;
+}
+
+*******************
+
 Using Html class attribute: 
   <button class='colorClass'>My Button</button><br>
   Using class propery binding :<br>
