@@ -1,3 +1,15 @@
+.boldClass{
+  font-weight: bold;
+}
+.italicsClass{
+  font-style: italic;
+}
+.colorClass{
+  color: red;
+}
+
+****************************
+
 Normal button - html:
   <button style="color:red">MyButton</button><br/>
   Using property binding of angular:
