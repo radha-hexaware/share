@@ -1,0 +1,10 @@
+Normal button - html:
+  <button style="color:red">MyButton</button><br/>
+  Using property binding of angular:
+  <button style="color:red" 
+      [style.font-weight]="isBold ? 'bold' : 'normal'">
+      My button </button><br/>
+  Using NgStyle Directive:
+    <button style='color:red' 
+       [ngStyle]="addStyles()">My Button</button><br>
+  
