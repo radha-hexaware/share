@@ -19,4 +19,18 @@ Normal button - html:
   Using NgStyle Directive:
     <button style='color:red' 
        [ngStyle]="addStyles()">My Button</button><br>
+       
+*****************************
+isBold: boolean = true;
+  fontSize: number = 30;
+  isItalic: boolean = true;
+
+  addStyles(){
+     let styles = {
+       'font-weight': this.isBold ? 'bold' : 'normal',
+       'font-style': this.isItalic ? 'italic' : 'normal',
+       'font-size.px': this.fontSize
+     };
+     return styles;
+  }
   
