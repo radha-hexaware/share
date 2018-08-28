@@ -1,29 +1,34 @@
-<span class="radioClass">Show : </span>
-
-<input type="radio" name="options" />
-<span class="radioClass">{{"All(" + all + ")"}}</span>
-
-<input name="options" type="radio">
-<span class="radioClass">{{"Male(" + male + ")"}}</span>
-
-<input name="options" type="radio">
-<span class="radioClass">{{"Female(" + female + ")"}}</span>
-
-
-**********************
-table {
-    color: #369;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: large;
-    border-collapse: collapse;
-}
-
-td {
-    border: 1px solid #369;
-    padding:5px;
-}
-
-th{
-    border: 1px solid #369;
-    padding:5px;
-}
+<table *ngIf="employee">
+  <thead>
+    <th colspan="2">
+      Employee Details
+    </th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Employee code</td>
+      <td>{{employee.code}}</td>
+    </tr>
+    <tr>
+        <td>Employee name</td>
+        <td>{{employee.name}}</td>
+    </tr>
+    <tr>
+        <td>Employee gender</td>
+        <td>{{employee.gender}}</td>
+    </tr>
+    <tr>
+        <td> Annual Salary</td>
+        <td>{{employee.annualSalary}}</td>
+      </tr>
+    <tr>
+      <td> Date Of Birth</td>
+      <td>{{employee.dateOfBirth}}</td>
+    </tr>      
+  </tbody>
+</table>
+<div *ngIf="!employee"> 
+  {{statusMessage}}
+</div>
+<div> <input type="button" value= "Go to Employees List"
+ (click) = "gotoEmployeeList"</div>
